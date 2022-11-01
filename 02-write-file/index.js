@@ -11,7 +11,6 @@ const rl = readline.createInterface({
 fs.open(path.join(__dirname, path.sep, 'result.txt'), 'w', (err) => {
   if (err) throw err
 })
-
 // функция приветствия, записи текста в файл, завершения программы
 function ask(question) {
   rl.question(question, (answer) => {
