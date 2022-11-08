@@ -15,17 +15,11 @@ fs.open(path.join(__dirname, path.sep, 'result.txt'), 'w', (err) => {
 function ask(question) {
   rl.question(question, (answer) => {
     if (answer === 'exit') {
-      console.log('Goodbuy! Your message is:')
-      console.log(
-        fs.readFileSync(path.join(__dirname, path.sep, 'result.txt'), 'utf8')
-      )
+      console.log('Goodbuy!')
       process.exit()
     }
     process.on('beforeExit', () => {
-      console.log('Goodbuy! Your message is:')
-      console.log(
-        fs.readFileSync(path.join(__dirname, path.sep, 'result.txt'), 'utf8')
-      )
+      console.log('Goodbuy!')
       process.exit()
     })
 
